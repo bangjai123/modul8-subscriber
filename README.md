@@ -5,4 +5,6 @@
 2. Guest pertama merupakan default yang sering digunakan untuk nama pengguna untuk melakukan autentikasi ke server AMQP. Guest kedua adalah password default yang sering digunakan dari nama pengguna yang telah disebutkan sebelumnya. localhost:5672 adalah kombinasi dari **hostname** (karena localhost berarti pada mesin lokal) dan 5672 yang merupakan **port** di mana AMQP server mendengarkan koneksi. Dengan demikian, link ini berarti bahwa siste akan melakukan koneksi ke server AMQP pada mesin lokal menggunakan port 5672 menggunakan pengguna `guest` dengan kata sandi `guest`
 
 ## Simulation slow subscriber
-![image](https://github.com/bangjai123/modul8-publisher/assets/120235144/2827944a-39d4-42c6-9bad-a87533e38fee)
+![image](https://github.com/bangjai123/modul8-subscriber/assets/120235144/39a45623-43e5-4810-a568-f476fbf76cd1)
+
+Gambar di atas adalah interface RabbitMQ saat saya melakukan cargo run dua kali pada publisher. Dari gambar tersebut dapat dilihat bahwa queue yg dibuat adalah 6. Hal ini dapat terjadi karena adanya sleep pada subscriber yang menyebabkan message masuk lebih lambar dan harus menunggu dahulu.
